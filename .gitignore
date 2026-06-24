@@ -1,0 +1,11 @@
+# Repo tracks only the deployable site (under site/).
+# Source assets, reference, tooling and previews stay local.
+/context/
+/header/
+/.agents/
+/.hallmark/
+/.claude/
+/skills-lock.json
+.DS_Store
+Thumbs.db
+*.log
