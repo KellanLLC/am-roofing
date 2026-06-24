@@ -1,0 +1,95 @@
+/* Hallmark · tokens.css — AM Roofing Co.
+ * theme: custom · vibe: "bold, patriotic, blue-collar, trustworthy, American"
+ * anchor neutral: navy (hue ~264) · single accent: patriotic red (hue ~27)
+ * axes: light / display-condensed-bold / warm
+ * Every colour/font/space value the build uses is named here. The page CSS
+ * references these by name only — no inline OKLCH or raw hex downstream.
+ */
+
+:root {
+  /* ---- Type families (2 + 1) ------------------------------------------- */
+  --font-display: "Big Shoulders Display", "Arial Narrow", system-ui, sans-serif;
+  --font-body:    "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+
+  /* ---- Colour — paper & navy-tinted neutrals --------------------------- */
+  --color-paper:        oklch(98.5% 0.004 250);
+  --color-paper-2:      oklch(96.5% 0.006 252);
+  --color-paper-3:      oklch(93.5% 0.009 255);
+  --color-ink:          oklch(25%   0.052 264);
+  --color-ink-2:        oklch(40%   0.045 262);
+  --color-muted:        oklch(51%   0.030 260);
+  --color-rule:         oklch(87%   0.012 255);
+  --color-rule-2:       oklch(92%   0.009 255);
+
+  /* ---- Colour — brand navy (structural / dark surfaces) ---------------- */
+  --color-navy:         oklch(28%   0.060 264);
+  --color-navy-deep:    oklch(20%   0.050 265);
+  --color-navy-rule:    oklch(42%   0.040 262);
+  --color-on-navy:      oklch(97%   0.005 250);
+  --color-on-navy-2:    oklch(80%   0.020 255);
+
+  /* ---- Colour — accent: patriotic red (signal, < 5% footprint) --------- */
+  --color-accent:        oklch(53%  0.205 27);   /* fills, rules, markers   */
+  --color-accent-strong: oklch(50%  0.205 27);   /* fills behind white text */
+  --color-accent-2:      oklch(45%  0.190 27);   /* hover / pressed / links */
+  --color-accent-ink:    oklch(98.5% 0.004 250); /* text on red             */
+  --color-focus:         oklch(56%  0.215 27);
+
+  /* ---- Spacing — 4pt scale, named by role ------------------------------ */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  /* ---- Type scale — major third (1.25) --------------------------------- */
+  --text-xs:   0.8rem;
+  --text-sm:   0.9rem;
+  --text-base: 1rem;
+  --text-md:   1.1875rem;
+  --text-lg:   1.45rem;
+  --text-xl:   1.85rem;
+  --text-2xl:  2.35rem;
+  --text-3xl:  3rem;
+  --text-display:   clamp(2.85rem, 7.5vw, 6rem);
+  --text-display-s: clamp(2.25rem, 5vw, 3.5rem);
+
+  /* ---- Lines, radii, rules --------------------------------------------- */
+  --leading-display: 1.02;
+  --leading-tight:   1.15;
+  --leading-body:    1.6;
+  --measure:         66ch;
+
+  --rule-hair: 1px;
+  --rule-bold: 3px;
+
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* ---- Page geometry --------------------------------------------------- */
+  --page-gutter: clamp(1.15rem, 4vw, 4rem);
+  --page-max:    75rem;
+
+  /* ---- Motion ---------------------------------------------------------- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long:  440ms;
+
+  /* ---- Z-index — six named levels -------------------------------------- */
+  --z-base:    1;
+  --z-raised:  10;
+  --z-sticky:  200;
+  --z-callbar: 250;
+  --z-modal:   400;
+  --z-toast:   500;
+}
